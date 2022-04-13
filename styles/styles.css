@@ -127,6 +127,7 @@ section {
     transform: scale(0.8);
     opacity: 0;
   }
+
   100% {
     -webkit-transform: scale(1);
     transform: scale(1);
@@ -140,6 +141,7 @@ section {
     transform: scale(0.8);
     opacity: 0;
   }
+
   100% {
     -webkit-transform: scale(1);
     transform: scale(1);
@@ -253,6 +255,7 @@ section {
 }
 
 .header-content .name {
+  margin-top: 15%;
   font-size: 60px;
   font-weight: 700;
   display: flex;
@@ -266,6 +269,7 @@ section {
 /* ////////////////////////////    animated text    ////////////////////////////// */
 .header-text-warpper {
   display: flex;
+  margin-bottom: 10%;
 }
 
 .header-text-warpper .static-text {
@@ -311,14 +315,17 @@ section {
 }
 
 @keyframes typing {
+
   40%,
   60% {
     left: calc(100% + 5px);
   }
+
   100% {
     left: 0;
   }
 }
+
 /* ////////////////////////////    animated text    ////////////////////////////// */
 
 /*About*/
@@ -349,7 +356,7 @@ section {
 }
 
 .about-me-bottom .email {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: var(--color-secondary);
 }
 
@@ -582,13 +589,13 @@ section {
   padding-top: 3.5rem;
 }
 
-.contact-content-con p{
+.contact-content-con p {
   display: block;
   text-align: start;
   margin-left: 3rem;
   margin-bottom: 2rem;
 }
-  
+
 .contact-content-con .right-contact {
   -webkit-box-flex: 3;
   -ms-flex: 3;
@@ -626,13 +633,12 @@ section {
 }
 
 .contact-content-con .right-contact .submit-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-end;
-  margin-right: 2rem;
+  display: inline;
+  font-size: 1.2rem;
+  color: var(--color-white);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 /*Independed components*/
@@ -708,7 +714,7 @@ section {
   transition: all 0.4s ease-out;
 }
 
-.main-btn .btn-text .submit-btn-input{
+.main-btn .btn-text .submit-btn-input {
   content: "";
   background-color: transparent !important;
   cursor: pointer;
@@ -746,18 +752,37 @@ section {
 }
 
 @media screen and (max-width: 600px) {
+  .header-text-warpper {
+    display: table-column;
+  }
+
+  .about-me-bottom {
+    margin: auto;
+    align-content: center;
+    text-align: center;
+  }
+
+  .about-me-btns {
+    display: table-column;
+    margin: auto;
+    align-content: center;
+  }
+
   .header-content .name {
     font-size: 40px;
     font-weight: 700;
     display: inline-block;
   }
+
   header {
     padding: 0 !important;
   }
+
   .theme-btn {
     width: 50px;
     height: 50px;
   }
+
   .controlls {
     top: auto;
     bottom: 0;
@@ -774,56 +799,69 @@ section {
     width: 100%;
     background-color: var(--color-grey-5);
   }
+
   .controlls .control {
     margin: 1rem 0.3rem;
   }
+
   .about-container {
     -ms-grid-columns: (1fr);
     grid-template-columns: repeat(1, 1fr);
   }
+
   .section {
     padding: 2rem 2.5rem !important;
   }
+
   .portfolios {
     -ms-grid-columns: (1fr);
     grid-template-columns: repeat(1, 1fr);
     padding-bottom: 6rem;
     margin-top: 1rem;
   }
+
   .skills {
     -ms-grid-columns: (1fr);
     grid-template-columns: repeat(1, 1fr);
     padding-bottom: 6rem;
   }
+
   .contact-content-con {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
   }
+
   .contact-content-con .right-contact {
     margin-left: 0;
     margin-top: 2.5rem;
   }
+
   .contact-content-con .right-contact .i-c-2 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
   }
+
   .contact-content-con .right-contact .i-c-2 :last-child {
     margin-left: 0;
     margin-top: 1.5rem;
   }
+
   .contact-content-con .right-contact {
     margin-bottom: 6rem;
   }
+
   .main-title h2 {
     font-size: 2rem;
   }
+
   .main-title h2 span {
     font-size: 2.3rem;
   }
+
   .main-title h2 .bg-text {
     font-size: 2.3rem;
   }
@@ -833,29 +871,35 @@ section {
   .section {
     padding: 7rem 11rem;
   }
+
   .contact-content-con {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
   }
+
   .contact-content-con .right-contact {
     margin-left: 0;
     margin-top: 2.5rem;
   }
+
   .contact-content-con .right-contact .i-c-2 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
   }
+
   .contact-content-con .right-contact .i-c-2 :last-child {
     margin-left: 0;
     margin-top: 1.5rem;
   }
+
   .contact-content-con .right-contact {
     margin-bottom: 6rem;
   }
+
   .main-title h2 .bg-text {
     font-size: 5.5rem;
   }
@@ -867,6 +911,7 @@ section {
     grid-template-columns: repeat(2, 1fr);
     margin-top: 6rem;
   }
+
   .portfolios {
     -ms-grid-columns: (1fr);
     grid-template-columns: repeat(2, 1fr);
@@ -878,6 +923,7 @@ section {
     -ms-grid-columns: (1fr);
     grid-template-columns: repeat(1, 1fr);
   }
+
   .portfolios {
     -ms-grid-columns: (1fr);
     grid-template-columns: repeat(1, 1fr);
@@ -889,12 +935,15 @@ section {
     -ms-grid-columns: (1fr);
     grid-template-columns: repeat(1, 1fr);
   }
+
   .main-title h2 {
     font-size: 4rem;
   }
+
   .main-title h2 span {
     font-size: 4rem;
   }
+
   .main-title h2 .bg-text {
     font-size: 4.5rem;
   }
@@ -916,12 +965,15 @@ section {
   .section {
     padding: 7rem 3rem;
   }
+
   .main-title h2 {
     font-size: 3rem;
   }
+
   .main-title h2 span {
     font-size: 3rem;
   }
+
   .main-title h2 .bg-text {
     font-size: 4rem;
   }
@@ -930,46 +982,82 @@ section {
 /* ///////////////////////// snack bar //////////////////////////////////// */
 
 #snackbar {
-  visibility: hidden; /* Hidden by default. Visible on click */
-  min-width: 250px; /* Set a default minimum width */
-  margin-left: -125px; /* Divide value of min-width by 2 */
-  background-color: var(--color-secondary); /* Black background color */
-  color: var(--color-primary); /* White text color */
-  text-align: center; /* Centered text */
-  border-radius: 20px; /* Rounded borders */
-  padding: 16px; /* Padding */
-  position: fixed; /* Sit on top of the screen */
-  z-index: 1; /* Add a z-index if needed */
-  left: 50%; /* Center the snackbar */
-  bottom: 30px; /* 30px from the bottom */
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  /* Divide value of min-width by 2 */
+  background-color: var(--color-secondary);
+  /* Black background color */
+  color: var(--color-primary);
+  /* White text color */
+  text-align: center;
+  /* Centered text */
+  border-radius: 20px;
+  /* Rounded borders */
+  padding: 16px;
+  /* Padding */
+  position: fixed;
+  /* Sit on top of the screen */
+  z-index: 1;
+  /* Add a z-index if needed */
+  left: 50%;
+  /* Center the snackbar */
+  bottom: 30px;
+  /* 30px from the bottom */
 }
 
-/* Show the snackbar when clicking on a button (class added with JavaScript) */
 #snackbar.show {
-  visibility: visible; /* Show the snackbar */
-  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
-  However, delay the fade out process for 2.5 seconds */
+  color: var(--color-white);
+  visibility: visible;
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
 /* Animations to fade the snackbar in and out */
 @-webkit-keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
 }
 
 @keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
 }
 
 @keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
 }
